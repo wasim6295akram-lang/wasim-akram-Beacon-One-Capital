@@ -1,0 +1,606 @@
+
+/* =========================
+   Global CSS
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  color: #1c2432;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  width: 100%;
+  height: 57px;
+  position: relative;
+  z-index: 10;
+  background: #fff;
+}
+
+.navbar {
+  max-width: 1100px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 190px;
+  height: 115px;
+  background: #fff;
+  border-radius: 0 0 100px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.logo img {
+  width: 42px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.logo span,
+.footer-logo span {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #514b9c;
+  text-align: center;
+}
+
+.logo small,
+.footer-logo small {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  font-size: 12px;
+  transition: .3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #b16bb0;
+}
+
+.nav-links .active {
+  border-bottom: 1px solid #b16bb0;
+  padding-bottom: 5px;
+}
+
+.nav-btn {
+  background: #eee8ef;
+  padding: 10px 18px;
+  border-radius: 30px;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+/* =========================
+   Hero Section
+========================= */
+
+.philosophy-hero {
+  max-width: 1066px;
+  height: 308px;
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      rgba(95, 68, 75, .48),
+      rgba(95, 68, 75, .48)
+    ),
+    url("./images/philosophy-banner.png");
+
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-overlay {
+  max-width: 650px;
+  padding: 20px;
+  color: #fff;
+}
+
+.hero-overlay h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.hero-overlay p {
+  font-size: 12px;
+  line-height: 1.7;
+  color: #fff;
+}
+
+/* =========================
+   Philosophy Cards
+========================= */
+
+.philosophy-section {
+  max-width: 1000px;
+  margin: 70px auto 0;
+  padding: 0 20px 65px;
+  position: relative;
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      transparent 0,
+      transparent 55%,
+      rgba(230, 226, 233, .25) 55.2%,
+      transparent 55.5%
+    );
+}
+
+.philosophy-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 21px;
+}
+
+.philosophy-card {
+  width: 256px;
+  min-height: 239px;
+  background: #f0eef2;
+  border-radius: 8px;
+  padding: 20px 15px 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  transition: .3s ease;
+}
+
+.philosophy-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, .08);
+}
+
+.card-icon {
+  width: 78px;
+  height: 78px;
+  background: #ad68ad;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+.card-icon span {
+  font-size: 37px;
+  font-weight: 300;
+}
+
+.philosophy-card h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 21px;
+  font-weight: 400;
+  margin-bottom: 11px;
+}
+
+.philosophy-card p {
+  font-size: 12px;
+  line-height: 1.65;
+  color: #77747b;
+}
+
+.active-card {
+  background: #ad68ad;
+  color: #fff;
+}
+
+.active-card .card-icon {
+  background: #fff;
+  color: #ad68ad;
+}
+
+.active-card p {
+  color: #fff;
+}
+
+/* =========================
+   Contact Section
+========================= */
+
+.contact-section {
+  max-width: 704px;
+  margin: 5px auto -45px;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-box {
+  min-height: 90px;
+  background: #917b87;
+  border-radius: 5px;
+  padding: 20px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.contact-box h2 {
+  font-family: "Playfair Display", serif;
+  color: #fff;
+  font-size: 38px;
+  font-weight: 400;
+}
+
+.contact-btn {
+  background: #fff;
+  color: #292929;
+  font-size: 12px;
+  padding: 13px 26px;
+  border-radius: 30px;
+  white-space: nowrap;
+  transition: .3s;
+}
+
+.contact-btn:hover {
+  background: #ad68ad;
+  color: #fff;
+}
+
+/* =========================
+   Footer
+========================= */
+
+.footer {
+  background: #192230;
+  color: #fff;
+  padding-top: 90px;
+}
+
+.footer-grid {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 20px 25px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1.2fr 1.3fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.footer-brand {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+}
+
+.footer-logo img {
+  width: 65px;
+  height: 80px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.footer-logo span {
+  color: #fff;
+  font-size: 19px;
+  letter-spacing: 3px;
+}
+
+.footer-logo small {
+  font-size: 13px;
+}
+
+.footer-links h3,
+.newsletter h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 28px;
+  position: relative;
+}
+
+.footer-links h3::after,
+.newsletter h3::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 36px;
+  height: 1px;
+  background: #fff;
+}
+
+.footer-links a {
+  display: block;
+  font-size: 11px;
+  margin-bottom: 12px;
+  transition: .3s;
+}
+
+.footer-links a:hover {
+  color: #c17bc0;
+}
+
+.newsletter form {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 32px;
+}
+
+.newsletter input {
+  width: 100%;
+  min-width: 0;
+  height: 34px;
+  background: transparent;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  padding: 0 12px;
+  color: #fff;
+  outline: none;
+  font-family: inherit;
+  font-size: 11px;
+}
+
+.newsletter input::placeholder {
+  color: #ddd;
+}
+
+.newsletter button {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 50%;
+  background: #ad68ad;
+  color: #fff;
+  cursor: pointer;
+}
+
+.social-links {
+  display: flex;
+  gap: 13px;
+  margin-top: 18px;
+}
+
+.social-links a {
+  width: 30px;
+  height: 30px;
+  background: #eee8ef;
+  color: #192230;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.copyright {
+  border-top: 1px solid #aaa;
+  text-align: center;
+  padding: 15px 10px;
+}
+
+.copyright p {
+  font-size: 10px;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 0 20px;
+    justify-content: flex-end;
+  }
+
+  .logo {
+    width: 140px;
+    height: 95px;
+  }
+
+  .logo img {
+    width: 35px;
+    height: 40px;
+  }
+
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 20;
+  }
+
+  .menu-icon span {
+    width: 25px;
+    height: 2px;
+    background: #1c2432;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 57px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 25px;
+    flex-direction: column;
+    gap: 22px;
+    align-items: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, .08);
+  }
+
+  #menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+
+  .philosophy-hero {
+    width: calc(100% - 30px);
+    height: 280px;
+  }
+
+  .hero-overlay h1 {
+    font-size: 32px;
+  }
+
+  .hero-overlay p {
+    font-size: 11px;
+  }
+
+  .philosophy-section {
+    margin-top: 45px;
+  }
+
+  .philosophy-card {
+    width: calc(50% - 12px);
+    min-height: 230px;
+  }
+
+  .philosophy-card h2 {
+    font-size: 18px;
+  }
+
+  .contact-section {
+    width: calc(100% - 35px);
+  }
+
+  .contact-box h2 {
+    font-size: 27px;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .philosophy-hero {
+    height: 250px;
+    background-position: center;
+  }
+
+  .hero-overlay h1 {
+    font-size: 29px;
+  }
+
+  .philosophy-grid {
+    gap: 15px;
+  }
+
+  .philosophy-card {
+    width: 100%;
+    min-height: 210px;
+    padding: 22px 20px;
+  }
+
+  .card-icon {
+    width: 68px;
+    height: 68px;
+    margin-bottom: 18px;
+  }
+
+  .philosophy-card h2 {
+    font-size: 21px;
+  }
+
+  .contact-section {
+    margin-bottom: -35px;
+  }
+
+  .contact-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 22px 12px;
+  }
+
+  .contact-box h2 {
+    font-size: 27px;
+  }
+
+  .footer {
+    padding-top: 75px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px 15px;
+  }
+
+  .footer-logo span {
+    font-size: 14px;
+  }
+
+  .footer-links h3,
+  .newsletter h3 {
+    font-size: 13px;
+  }
+
+  .newsletter {
+    grid-column: span 2;
+  }
+
+  .copyright p {
+    font-size: 9px;
+  }
+}
